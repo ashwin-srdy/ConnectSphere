@@ -1,0 +1,99 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+}
+
+/* Login Page */
+.login-container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h1 {
+  margin-bottom: 1.5rem;
+  color: #4CAF50;
+}
+
+.login-container input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-container button:hover {
+  background: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Dashboard */
+.dashboard-container {
+  width: 100%;
+  display: none;
+}
+
+.dashboard-container .hero {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #4CAF50, #45a049);
+  color: white;
+}
+
+.dashboard-container .features {
+  padding: 2rem;
+  background: white;
+  text-align: center;
+}
+
+.feature-card {
+  display: inline-block;
+  width: 30%;
+  margin: 1rem;
+  padding: 1rem;
+  background: #f4f4f4;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}

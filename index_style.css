@@ -1,0 +1,113 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #4caf50, #45a049);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+}
+
+.hero-image {
+  width: 80%;
+  max-width: 400px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 1.5s ease-in-out;
+}
+
+/* Feature Cards */
+.feature-card {
+  border: 0;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Summary Section */
+.summary-section {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.summary-section h2 {
+  font-size: 2.5rem;
+  color: #4CAF50;
+}
+
+.summary-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.summary-section .emoji {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #4CAF50;
+}
+
+.summary-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summary-section h4 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #4CAF50;
+}
+
+
+/* Globe Animation */
+.globe-animation {
+  width: 100px;
+  animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

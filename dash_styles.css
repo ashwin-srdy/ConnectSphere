@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background: #4CAF50;
+  color: white;
+}
+
+.dashboard-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.welcome-section h1 {
+  color: #4CAF50;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+  margin: 2rem 0;
+}
+
+.recommendations {
+  display: flex;
+  gap: 1rem;
+}
+
+.recommendation-card {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Notifications Section */
+.notifications-section {
+  margin: 2rem 0;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications-list li {
+  margin: 0.5rem 0;
+  background: white;
+  padding: 0.8rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Section */
+.profile-section {
+  margin: 2rem 0;
+}
+
+.profile-details {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Settings Section */
+.settings-section {
+  margin: 2rem 0;
+}
+
+.settings-options button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.settings-options button:hover {
+  background: #45a049;
+}
+
+/* Footer */
+.dashboard-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #4CAF50;
+  color: white;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+  border-color: #333;
+}
+
+body.dark-mode a.nav-link {
+  color: #ffffff;
+}
+
+body.dark-mode .recommendation-card,
+body.dark-mode .profile-details,
+body.dark-mode .settings-options button {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: 1px solid #333;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-mode button {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
+}
+

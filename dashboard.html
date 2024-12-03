@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectSphere Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="dash_styles.css">
+</head>
+<body>
+  <div id="dashboard-container" class="dashboard-container">
+    <!-- Header Section -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <!-- Globe Icon -->
+          <span class="emoji mb-3 globe-animation" style="font-size: 3rem; display: inline-block;">🌍</span>
+          <a class="navbar-brand" href="dashboard.html">ConnectSphere</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="feed.html">Feed</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="chat.html">Chat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <h1>Welcome Back, John Doe!</h1>
+      <p>Your personalized recommendations and updates are ready.</p>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="recommendations-section">
+      <h2>Personalized Recommendations</h2>
+      <div class="recommendations">
+        <div class="recommendation-card">
+          <h3>Virtual Connection</h3>
+          <p>Connect with Jane Smith, who shares your interests in technology.</p>
+          <button class="feedback-btn">Provide Feedback</button>
+        </div>
+        <div class="recommendation-card">
+          <h3>Event: Tech Meetup</h3>
+          <p>Join the upcoming Tech Innovators Meetup in your area.</p>
+          <button class="view-details-btn">View Details</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notifications Section -->
+    <section id="notifications" class="notifications-section">
+      <h2>Notifications</h2>
+      <ul class="notifications-list">
+        <li>New recommendation: Virtual connection with Alex Johnson.</li>
+        <li>Event Reminder: Data Science Workshop on Dec 5th.</li>
+      </ul>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="profile-section">
+      <h2>Your Profile</h2>
+      <div class="profile-details">
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> johndoe@gmail.com</p>
+        <p><strong>Preferences:</strong> Technology, Data Science, Startups</p>
+        <button class="update-btn">Update Preferences</button>
+      </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="settings-section">
+      <h2>Settings</h2>
+      <div class="settings-options">
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <button id="language-toggle">Change Language</button>
+        <button id="reset-settings">Reset to Default</button>
+        <button id="switch-account">Switch Account</button>
+      </div>
+    </section>
+
+    <footer class="dashboard-footer">
+      <p>&copy; 2024 ConnectSphere. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Function to apply dark mode
+    function applyDarkMode(isDarkMode) {
+      const body = document.body;
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+      if (isDarkMode) {
+        body.classList.add("dark-mode");
+        if (darkModeToggle) darkModeToggle.textContent = "Switch to Light Mode";
+      } else {
+        body.classList.remove("dark-mode");
+        if (darkModeToggle) darkModeToggle.textContent = "Switch to Dark Mode";
+      }
+    }
+
+    // Toggle dark mode and save preference
+    function toggleDarkMode() {
+      const isDarkMode = !document.body.classList.contains("dark-mode");
+      localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
+      applyDarkMode(isDarkMode);
+    }
+
+    // Initialize dark mode based on saved preference
+    function initializeDarkMode() {
+      const savedPreference = localStorage.getItem("darkMode");
+      const isDarkMode = savedPreference === "enabled";
+      applyDarkMode(isDarkMode);
+    }
+
+    // Event listener for the dark mode toggle button
+    document.addEventListener("DOMContentLoaded", () => {
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      if (darkModeToggle) {
+        initializeDarkMode();
+        darkModeToggle.addEventListener("click", toggleDarkMode);
+      }
+
+      // Additional Event Listeners for Other Settings
+      document.getElementById("language-toggle").addEventListener("click", () => {
+        alert("Language switching is under development!");
+      });
+
+      document.getElementById("reset-settings").addEventListener("click", () => {
+        alert("Settings reset to default!");
+      });
+
+      document.getElementById("switch-account").addEventListener("click", () => {
+        window.location.href = "login.html";
+      });
+    });
+  </script>
+</body>
+</html>
